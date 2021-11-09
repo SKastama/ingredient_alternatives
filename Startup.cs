@@ -9,7 +9,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
-using ingredient_alternatives.Services;
+// using ingredient_alternatives.Services;
 
 namespace ingredient_alternatives
 {
@@ -22,11 +22,6 @@ namespace ingredient_alternatives
         public IConfiguration Configuration { get; }
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddHttpClient<IAPIService, APIService>(c => 
-            {
-                // Add link below to api
-                c.BaseAddress = new Uri("link");
-            });
             services.AddSession();
             services.AddMvc(options => options.EnableEndpointRouting = false);
         }
