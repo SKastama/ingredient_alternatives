@@ -18,7 +18,7 @@ namespace ingredient_alternatives
             CreateHostBuilder(args).Build().Run();
             HttpResponse<string> response = Unirest.get("https://spoonacular-recipe-food-nutrition-v1.p.rapidapi.com/food/ingredients/substitutes?ingredientName=butter")
                 .header("X-RapidAPI-Host", "spoonacular-recipe-food-nutrition-v1.p.rapidapi.com")
-                .header("X-RapidAPI-Key", "82e202cbadmsh7e539dd7106113dp1f7750jsn0cdddebbb461")
+                .header("X-RapidAPI-Key", "")
                 .header("Accept", "application/json")
                 .asJson<string>();
             Console.WriteLine(response.Body.ToString());
